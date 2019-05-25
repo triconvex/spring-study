@@ -14,4 +14,12 @@ public class FilterConfig {
         return registrationBean;
     }
 
+    @Bean
+    public FilterRegistrationBean filterRegistrationBean() {
+        FilterRegistrationBean registrationBean = new FilterRegistrationBean(new HomeFilter2());
+        registrationBean.addUrlPatterns("/");
+        return registrationBean;
+    }
+
+
 }
